@@ -1,0 +1,276 @@
+:root {
+    --dark-bg: #1e1e1e;
+    --dark-text: #dcdcdc;
+    --brown-bg: #4e342e;
+    --brown-text: #fff;
+    --navy-bg: #001f3f;
+    --navy-text: #fff;
+    --tab-bg: #444;
+    --tab-active-bg: #4CAF50;
+    --tab-text: #fff;
+    --container-bg: #333;
+    --container-border: #444;
+    --textarea-bg: #1e1e1e;
+    --textarea-text: #dcdcdc;
+    --code-bg: #2e2e2e;
+    --code-text: #dcdcdc;
+    --fsize: 18px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+  h2{
+    letter-spacing: 2px;
+  }
+  h3{
+    letter-spacing: 2px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--container-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--container-border);
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--tab-bg);
+    color: var(--tab-text);
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 5px;
+  }
+
+  .tab.active {
+    background-color: var(--tab-active-bg);
+  }
+
+  .code-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--code-bg);
+  }
+
+  .code-section {
+    margin-bottom: 20px;
+  }
+
+  .line-numbers {
+    width: 30px;
+    text-align: right;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 10px;
+    font-family: monospace;
+    color: #e1e794;
+    background-color: var(--tab-bg);
+    border-radius: 4px;
+    overflow-y: auto;
+    height: 300px;
+    box-sizing: border-box;
+    font-size: 17px;
+    line-height: 27px;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  
+  
+
+  textarea {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 18px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    resize: none;
+    background-color: var(--textarea-bg);
+    color: var(--textarea-text);
+    overflow-y: auto;
+    line-height: 1.5;
+    box-sizing: border-box;
+  }
+
+
+  .run-button:hover {
+    transform: scale(1.05);
+
+  }
+
+  .run-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  pre {
+    background-color: var(--code-bg);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--container-border);
+    overflow-x: auto;
+    white-space: pre-wrap;
+    margin-top: 10px;
+    color: var(--code-text);
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #807f7f;
+    font-size: 0.9rem;
+  }
+
+  .toggle-theme {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--tab-active-bg);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .theme-option {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    background-color: var(--tab-bg);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .theme-option button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .theme-option button:hover {
+    background-color: #555;
+  }
+
+  .rbtn {
+    position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .run-button {
+    width: 30px;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 20px auto;
+  }
+
+  .rbtn div img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .rbtn h1 {
+    position: relative;
+    left: 305px;
+  }
+
+  .rbtn h1 img {
+    position: absolute;
+    width: 65px;
+    left: -82px;
+    top: -17px;
+  }
+
+  pre{
+    font-size: var(--fsize);
+  }
+  p{
+    padding: 5px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+
+  ::placeholder {
+    opacity: 0.6;
+    color: rgb(230, 230, 205);
+  }
+
+  /* Style the scrollbar track */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+  height: 12px; /* Adjust the height of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #2e2e2e; /* Dark background for the track */
+  border-radius: 10px; /* Add rounded corners */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #555555; /* Darker thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  border: 3px solid #2e2e2e; /* Add spacing around the thumb */
+}
+
+/* Change the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888888; /* Lighter shade on hover */
+}
+
+/* Optional: Style the scrollbar buttons (if needed) */
+::-webkit-scrollbar-button {
+  display: none; /* Hide the buttons */
+}
+

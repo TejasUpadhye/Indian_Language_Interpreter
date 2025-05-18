@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Language Interpreter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Theme Changing Button -->
+  <button class="toggle-theme" onclick="toggleThemeOptions()">Change Theme</button>
+  <div class="theme-option" id="themeOptions">
+    <button onclick="setTheme('dark')">Dark Theme</button>
+    <button onclick="setTheme('light')">Light</button>
+    <button onclick="setTheme('navy')">Navy Blue</button>
+    <button onclick="setTheme('neon')">Neon</button>
+  </div>
+
+  <!-- Main Container -->
+  <div id="cont" class="container">
+    <!-- run button  -->
+    <div class="rbtn">
+      <h1 id="x1"><img src="/lan.png" alt="  ">Indian Language Interpreter</h1>
+      <div class="run-button " onclick="executeCode()"><img src="/run.png" alt="RUN"></div>
+    </div>
+
+    <div id="tabs" class="tabs">
+      <div class="tab active" onclick="showSection('input-output')">Input & Output</div>
+      <div class="tab" onclick="showSection('about')">About</div>
+    </div>
+
+    <!-- Input & Output Section -->
+    <div id="input-output" class="code-section">
+      <div id="x2">
+        <h2>Input Code</h2>
+        <div style="display: flex;">
+          <!-- Line Numbers -->
+          <div id="lineNumbers" class="line-numbers" style="padding-left: 17px; padding-right: 27px;"></div>
+          <!-- Code Input -->
+          <textarea id="codeInput" placeholder="Write the code in your Indian way..." oninput="updateLineNumbers()"
+            spellcheck="false"></textarea>
+        </div>
+        <h2>Output</h2>
+        <!-- output  -->
+        <pre id="outputDisplay"></pre>
+      </div>
+
+
+    </div>
+    <!-- Factorial Section -->
+    <div id="factorial" class="code-section" style="display: none;">
+      <h2>Factorial Example</h2>
+      <pre id="x6">
+        
+        "hello world " //print string 
+        20 // print a number
+        x // directly type the varibale name to display its value
+        
+        // declare and initialse a variable 
+        samjho x = 10
+        samjho h = "hello world"
+        
+        //declare function
+        samjho square = fn(n){
+        n*n
+        }
+        
+        //use recurive calls 
+        dekh x = fn(n){
+          agar(n==0){
+            vapis 1
+          }varna{
+            vapis n*x(n-1);
+          }
+        }
+        x(5)
+
+        
+
+        dekh studentGrades = {
+          "Alice": 90,
+          "Bob": 85,
+          "Charlie": 92
+        };
+
+        
+        
+      </pre>
+      <p>These example's demonstrate some of the functionality of the language </p>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="code-section" style="display: none;">
+      <h2 id="x3" style="position: relative;top: 10px; left: 12px;">About the Indian Language Interpreter</h2>
+      <div id="x4" style="position: relative;top: 7px; left: 15px;">
+        <p>
+          The <strong>Indian Language Interpreter</strong> is an innovative platform designed to bridge the gap between
+          programming and native language speakers. This application enables users to write and execute code in a variety
+          of Indian languages, making programming accessible to individuals who are more comfortable in their native
+          tongues. It simplifies the learning process for budding developers by allowing them to write code in familiar
+          languages, without the barrier of learning English-centric programming syntax.
+        </p>
+        <p>
+          The platform interprets code written in languages like Hindi, Marathi, and others, providing accurate results
+          based on user input. This initiative aims to revolutionize coding education and increase participation from
+          diverse linguistic backgrounds, empowering individuals to create solutions without language constraints.
+        </p>
+        <p>
+          The goal of this project is not only to make programming easier but also to create an inclusive environment
+          where language is no longer a barrier to learning and innovation. It promotes digital literacy, enabling users
+          from various regions to harness the power of coding in a language they understand best.
+        </p>
+      </div>
+      <div id="x5" style="position: relative;top: 10px; left: 12px;">
+        <h3>Contributors:</h3>
+        <ul>
+          <li><strong>1. Upadhye Tejas Sachindeo</strong></li>
+          <li><strong>2. Yeddula Nandan Reddy</strong></li>
+          <li><strong>3. Shubham Gandhar</strong></li>
+          <li><strong>4. Vivek Pradhan</strong></li>
+        </ul>
+      </div>
+      
+      <div style="width: 40%; position: relative ; left: 26%;" id="x7" class="tab" onclick="showSection('factorial')">User Manual</div>
+    </div>
+
+
+  </div>
+  <!-- Footer Section -->
+  <div class="footer">
+    &copy; 2025 Indian Language Interpreter. All Rights Reserved.
+  </div>
+
+  <!-- JavaScript for Interactive Features -->
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>
