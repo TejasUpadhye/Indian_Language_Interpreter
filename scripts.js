@@ -4,7 +4,7 @@ async function executeCode() {
     // Process the input to merge multiline code within { } into a single line
     const processedCode = processCode(codeInput);
 
-    const response = await fetch("http://localhost:8080/execute", {
+    const response = await fetch("https://indian-language-interpreter.onrender.com", {
         method: "POST",
         headers: {
             "Content-Type": "text/plain"
